@@ -1,0 +1,35 @@
+<apex:page controller="CalculatorVFCtrl">                                              <!--Adding custom controller-->
+    
+<apex:form >                                                                           <!--adding form tag-->
+    
+    <apex:pageBlock title="Calculator" >                                               <!--creating page block tag -->
+    
+        <apex:pageBlockSection columns="2">                                            <!--creating page block section component 1 and columns attribute-->
+    
+            <apex:inputText label="Number One" value="{!numberOne}"/>                  <!--taking input parameter for number one-->
+            <apex:inputText label="Number Two" value="{!numberTwo}"/>                  <!--taking input parameter for number one-->  
+    
+        </apex:pageBlockSection>                                                       <!--closing page block section -->                                    
+        
+     
+        
+        
+        <apex:pageBlockSection >                                                        <!--creating page block section component 2-->
+             
+             <apex:commandButton value="Addition" action="{!addition}" />              <!--adding command button for addition and its attribute-->
+            <apex:commandButton value="Subtraction" action="{!subtraction}"/>          <!--adding command button for subtraction and its attribute-->
+            <apex:commandButton value="Division" action="{!division}" />               <!--adding command button for division and its attribute-->
+            <apex:commandButton value="Multiplication" action="{!multiplication}" />   <!--adding command button for multiplication and its attribute-->
+         
+        </apex:pageBlockSection>
+     
+        
+        
+        <apex:pageBlockSection >                                                        <!--creating page block section 3-->                           
+            <apex:outputLabel value="Output: {!result}" />                              <!--adding output field for displying answer-->
+            <apex:commandButton value="Reset" action="{!Reset}"/>                       <!--adding command button for reset-->
+                
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
